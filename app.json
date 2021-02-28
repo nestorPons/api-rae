@@ -1,0 +1,12 @@
+{
+    "name": "ApiRAE",
+    "description": "Api para automatizar las busquedas en la RAE.",
+    "keywords": [
+      "rae",
+      "diccionario"
+    ],
+    "website": "https://apirae.herokuapp.com/",
+    "repository": "https://github.com/nestorpons/apirae",
+    "success_url": "/",
+    "image": "heroku/ruby"
+  }
