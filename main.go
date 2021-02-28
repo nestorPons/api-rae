@@ -15,5 +15,5 @@ func main() {
 
 	http.HandleFunc("/hello_world", helloHandler)
 	log.Println("Listing for requests at http://localhost/hello")
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
