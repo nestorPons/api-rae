@@ -3,10 +3,9 @@
     "description": "Api para automatizar las busquedas en la RAE.",
     "keywords": [
       "rae",
-      "diccionario"
+      "diccionario",
+      "apirest"
     ],
     "website": "https://apirae.herokuapp.com/",
-    "repository": "https://github.com/nestorpons/apirae",
-    "success_url": "/",
-    "image": "heroku/ruby"
+    "repository": "https://github.com/nestorpons/apirae"
   }
