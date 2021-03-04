@@ -1,48 +1,37 @@
 
 # ApiRAE
 
-A barebones Go app, which can easily be deployed to Heroku.
+API para la Real Academia de la lengua Española.
+Extrae las definiciones de la web de la RAE.
 
-This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
+## Forma de uso:
+    `https://apirae.herokuapp.com/buscar/[termino de búsqueda]`
 
-## Running Locally
+## Devuelve json:
+    {
+        acepcion: acepción,
+        definiciones : {
+            id: identificador único,
+            definicion: significado
+        }
+    }
 
-Make sure you have [Go](http://golang.org/doc/install) version 1.12 or newer and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+## Ejemplo:
+    `https://apirae.herokuapp.com/buscar/perro`
 
-```sh
-$ git clone https://github.com/heroku/go-getting-started.git
-$ cd go-getting-started
-$ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
-github.com/mattn/go-colorable
-gopkg.in/bluesuncorp/validator.v5
-golang.org/x/net/context
-github.com/heroku/x/hmetrics
-github.com/gin-gonic/gin/render
-github.com/manucorporat/sse
-github.com/heroku/x/hmetrics/onload
-github.com/gin-gonic/gin/binding
-github.com/gin-gonic/gin
-github.com/heroku/go-getting-started
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
-
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-
-## Documentation
-
-For more information about using Go on Heroku, see these Dev Center articles:
-
-- [Go on Heroku](https://devcenter.heroku.com/categories/go)
+[
+  {
+    "Title": "Del lat. casa 'choza'.",
+    "Data": [
+      {
+        "id": 1,
+        "data": "1. f. Edificio para habitar. Una casa de ocho plantas."
+      },
+      {
+        "id": 2,
+        "data": "2. f. Edificio de una o pocas plantas destinado a vivienda unifamiliar, en oposición a piso. Quieren vender el piso y comprarse una casa."
+      },
+      {
+        "id": 3,
+        "data": "3. f. piso (‖ vivienda). Mi casa está en el 3.º C."
+        ....

@@ -15,12 +15,12 @@ import (
 
 type Def struct {
 	Id  int    `json:"id"`
-	Def string `json:"data"`
+	Def string `json:"definicion"`
 }
 
 type Deft struct {
-	Title string
-	Data  []Def
+	Title string `json:"acepcion"`
+	Data  []Def  `json:"definiciones"`
 }
 
 type Defs []Deft
@@ -39,7 +39,13 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Logger())
 	router.GET("/buscar/:w", func(c *gin.Context) {
+		//limpiamos entrada de caracteres especiales
+
 		word := c.Param("w")
+		// Limpiamos de caracteres especiales
+		re := regexp.MustCompile("[.!@$%^&*()]+")
+		word = string(re.ReplaceAll([]byte(word), []byte("")))
+
 		url := "https://dle.rae.es/" + word
 		res, err := http.Get(url)
 		// If url could not be opened, we inform the channel chFailedUrls:
