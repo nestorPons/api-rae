@@ -17,7 +17,7 @@ Extrae las definiciones de la web de la RAE.
     }
 
 ## Ejemplo:
-    `https://apirae.herokuapp.com/buscar/perro`
+    `https://mi-url/buscar/perro` 
 
 [
   {
